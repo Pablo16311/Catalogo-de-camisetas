@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Camiseta</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detalle-container {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .slider img {
+            width: 300px;
+            cursor: zoom-in;
+            border-radius: 8px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="detalle-container">
+        <h1 id="titulo"></h1>
+        <p id="info"></p>
+        <div class="slider" id="galeria"></div>
+    </div>
+
+    <div class="modal" id="modal" onclick="cerrarModal()">
+        <img id="imagenModal" src="">
+    </div>
+
+    <script src="detalle.js"></script>
+</body>
+</html>
